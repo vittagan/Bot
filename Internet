@@ -1,0 +1,10 @@
+import subprocess
+
+internet = False
+while not internet:
+    try:
+        subprocess.check_call(["ping", "-c 1", "www.google.ru"])
+        print('Интернет снова заработал!')
+        internet = True
+    except subprocess.CalledProcessError:
+        print("Интернет все еще не работает!")
