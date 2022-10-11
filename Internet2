@@ -1,0 +1,12 @@
+
+
+def active():
+    import requests
+    try:
+        requests.head("http://www.google.com/", timeout=1)
+        print('ok internet')
+       # return True
+    except requests.ConnectionError:
+        print('no internet')
+while 1:    
+	active()
