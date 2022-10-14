@@ -1,7 +1,7 @@
 
 
 def active():
-    import requests
+    import urequests as requests
     try:
         requests.head("http://www.google.com/", timeout=1)
         print('ok internet')
